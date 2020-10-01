@@ -4,70 +4,70 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
         //Loop Basics
 //            //Q1: WHILE LOOPs
-//            int i = 5;
-//            while (i <= 15) {
-//                System.out.print(i + " ");
-//                i++;
-//            }
+            int i = 5;
+            while (i <= 15) {
+                System.out.print(i + " ");
+                i++;
+            }
 //
 //            //Q2: DO-WHILE LOOPS
 //                //Q.2a
-//                int j = 0;
-//                do {
-//                    System.out.println(j);
-//                    j+=2;
-//                }
-//                while(j <= 100);
+                int j = 0;
+                do {
+                    System.out.println(j);
+                    j+=2;
+                }
+                while(j <= 100);
 
 //                //Q.2b
-//                int h = 100;
-//                do {
-//                    System.out.println(h);
-//                    h-=5;
-//                }
-//                while(h >= -10);
+                int h = 100;
+                do {
+                    System.out.println(h);
+                    h-=5;
+                }
+                while(h >= -10);
 
                 //Q.2c
-//                long k = 2;
+                long k = 2;
                     //have to use either a double (w/ decimal) or long (w/o decimal) since the int scope is not enough data for the square in the loop
-//                do {
-//                    System.out.println(k);
-//                    k*=k;
-//                }
-//                while (k < 1000000);
+                do {
+                    System.out.println(k);
+                    k*=k;
+                }
+                while (k < 1000000);
 
                 //Q.3: FOR LOOPS --> REFACTORING THE ABOVE LOOPS
-//                for (int l = 5; l <= 15; l++){
-//                    System.out.println(l);
-//                };
+                for (int l = 5; l <= 15; l++){
+                    System.out.println(l);
+                };
 
-//                for (int m = 0; m <= 100; m += 2){
-//                    System.out.println(m);
-//                }
+                for (int m = 0; m <= 100; m += 2){
+                    System.out.println(m);
+                }
 
-//                for (int n = 100; n >= -10; n -= 5) {
-//                    System.out.println(n);
-//                };
+                for (int n = 100; n >= -10; n -= 5) {
+                    System.out.println(n);
+                };
 
-//                for (long q = 2; q < 1000000; q *= q){
-//                    //have to use either a double (w/ decimal) or long (w/o decimal) since the int scope is not enough data for the square in the loop
-//                    System.out.println(q);
-//                };
+                for (long q = 2; q < 1000000; q *= q){
+                    //have to use either a double (w/ decimal) or long (w/o decimal) since the int scope is not enough data for the square in the loop
+                    System.out.println(q);
+                };
 
                 //Q4 --> FIZZBUZZ
-//                for (int x = 0; x <= 100; x++){
-//                    if(x % 15 == 0) --> preferred since its less code; multiplied the 2 required modulus together to get the main modulus
-//                    if (x % 3 == 0 && x % 5 == 0){
-//                        System.out.println("FizzBuzz");
-//                    }
-//                    else if (x % 3 == 0) {
-//                        System.out.println("Fizz");
-//                    } else if (x % 5 == 0) {
-//                        System.out.println("Buzz");
-//                    } else {
-//                        System.out.println(x);
-//                    }
-//                }
+                for (int x = 0; x <= 100; x++){
+                    if(x % 15 == 0) //--> preferred since its less code; multiplied the 2 required modulus together to get the main modulus
+                    if (x % 3 == 0 && x % 5 == 0){
+                        System.out.println("FizzBuzz");
+                    }
+                    else if (x % 3 == 0) {
+                        System.out.println("Fizz");
+                    } else if (x % 5 == 0) {
+                        System.out.println("Buzz");
+                    } else {
+                        System.out.println(x);
+                    }
+                }
 
 //                //Q5 Display Table of Powers
                 Scanner scan = new Scanner(System.in);
