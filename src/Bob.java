@@ -23,10 +23,12 @@ public class Bob {
 //            System.out.println("Whatever!");
 //        }
 
+        //1st Example of the Chat Bot!
         boolean keepGoing = true;
+        System.out.println("Hey Bob! How is it going?!");
         do {
-            System.out.println("Hey Bob! What are your thoughts on code?!");
-            String userQuestions = scan.nextLine();
+            System.out.println("Let's do this!");
+            String userQuestions = scan.nextLine().trim();
             if (userQuestions.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (userQuestions.endsWith("!")) {
@@ -37,10 +39,10 @@ public class Bob {
                 System.out.println("Whatever!");
             }
 
-            System.out.println("Do you really want to continue this? My torture? (y/n)");
-            String userAnswer = scan.next();
-            scan.nextLine();
+            System.out.println("Bob: Really? You want to continue? (y/n)");
+            String userAnswer = scan.nextLine().trim();
             if (!userAnswer.equalsIgnoreCase("y")) {
+                System.out.println("Bob: Finally about head out and play some video-games!");
                 keepGoing = false;
             }
         } while (keepGoing);
