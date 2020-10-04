@@ -14,8 +14,10 @@ public class MethodsExercises {
         System.out.println("Enter a number between 1 and 10");
         getInteger(1,10);
 
-        factorial(3);
+        factorial();
     }
+
+    /***  Basic Arithmetic  ***/
 
     public static int add (int num1, int num2) {
         return num1 + num2;
@@ -58,6 +60,7 @@ public class MethodsExercises {
         return result;
     }
 
+    /***  Number in a Range  ***/
     public static int getInteger(int min, int max) {
         //Generate the Scanner
         Scanner scan = new Scanner(System.in);
@@ -76,7 +79,8 @@ public class MethodsExercises {
         return userInput;
     }
 
-    public static long factorial (long num) {
+    /***  Factorials  ***/
+    public static long factorial () {
         //generate a scanner
         Scanner scan = new Scanner(System.in);
         //ask for the user for input
@@ -101,13 +105,40 @@ public class MethodsExercises {
 
         //conditional if the user selects to continue
         if (userConfirm.equalsIgnoreCase("y") || userConfirm.equalsIgnoreCase("yes")) {
-            //if yes, then use recursion to redo the current factorial method
-            factorial(userNum);
+            //if yes/y, then use recursion to redo the current factorial method
+            factorial();
         }
 
         //return the final results
         return result;
     }
+
+/***  Dice Rolling  ***/
+    public static int diceRolling () {
+        //Create the scanner
+        Scanner scan = new Scanner(System.in);
+        //Ask the user a question about the number of sides to the dice
+        System.out.println("Enter the number of sides for a pair dice");
+        //Generate the variable the # of dice sides
+        int diceSides = scan.nextInt();
+
+        //Ask the user to roll the dice
+        System.out.println("Do you want to roll the dice again? [y/n]");
+        String userResponse = scan.nextLine();
+        if (userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes")) {
+            diceRolling();
+        }
+
+        //Rolling the Dice
+
+
+
+
+
+        return 6;
+    }
+
+/***  Game Development 101  ***/
 
 
 
