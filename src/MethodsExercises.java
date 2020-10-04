@@ -7,12 +7,14 @@ public class MethodsExercises {
         System.out.println("multiply(1,2) = " + multiply(1, 2));
         divide(1,0);
         divide(10,5);
+        System.out.println("divide(double 2.0, double 10.0) = " + divide(2.0,10.0));
         System.out.println("modulus(2,10) = " + modulus(2, 10));
+        System.out.println("multiplication(3,3) = " + multiplication(3,3));
 
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
+        System.out.println("Enter a number between 1 and 10");
+        getInteger(1,10);
 
-//        factorial();
+        factorial(3);
     }
 
     public static int add (int num1, int num2) {
@@ -44,37 +46,69 @@ public class MethodsExercises {
         return num1 % num2;
     };
 
-//    public static void multiplication (int num1, int num2) {
-//        for (int i = 0; i <= num2; i++) {
-//            System.out.println();
-//        }
-//    }
+    public static int multiplication (int num1, int num2) {
+        //Setup the final output variable
+        int result = 0;
+        //generate a loop
+        for (int i = 1; i <= num2; i++) {
+            //load the addition in the result variable
+            result += num1;
+        }
+        //since this isn't a void method, it MUST return a value of the initial data type
+        return result;
+    }
 
-//    public static int getInteger(int min, int max) {
-//        Scanner scan = new Scanner(System.in);
-////        min = scan.nextInt();
-////        max = scan.nextInt();
-//
-//        if (min >= 1 && max <= 10) {
-//            return
-//        } else if ()
-//
-//
-//        if (min >= 1 && min < max) {
-//            return min;
-//        } else if (max <= 10 && min < max) {
-//            return max;
-//        }
-//        return getInteger(min, max);
-//    }
+    public static int getInteger(int min, int max) {
+        //Generate the Scanner
+        Scanner scan = new Scanner(System.in);
+        //Ask the question to the user
+        //System.out.println("Enter a number between 1 and 10");
 
-//    public static void factorial () {
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Please enter a number from 1 to 10.");
-//        int userInput = scan.nextInt();
-//
-//        if (userInput >= 1 || userInput <= 10) {return 1};
-//        return userInput * factorial(userInput - 1);
-//    }
+        //Generate a variable to store the value of the user
+        int userInput = scan.nextInt();
+        //setup the Conditional of the user input to determine if its outside the min and max range
+        if (userInput < min || userInput > max) {
+            System.out.printf("Please choose a number between %d and %d.\n", min, max);
+            return getInteger(min, max);
+        }
+        //Note when the number is correct is within the min/max range
+        System.out.printf("Congrats, your number: %d, falls within the min: %d and max: %d range.\n", userInput, min, max);
+        return userInput;
+    }
+
+    public static long factorial (long num) {
+        //generate a scanner
+        Scanner scan = new Scanner(System.in);
+        //ask for the user for input
+        System.out.println("Please enter a number from 1 to 10.");
+        //since we already have a method to determine our range, we will set our userinput to equal it since it also takes the user input via a scan in the method
+        int userNum = getInteger(1,10);
+        //This will load the final result from the loop
+        long result = 1;
+        //Stating what the factorial is
+        System.out.printf("Your factorial is: %d\n", userNum);
+
+        //Looping to get the factorial result that is based on the userNum
+        for(int i = 1; i <= userNum; i++) {
+            result *= i;
+            System.out.printf("%d! = %d\n", i, result);
+        }
+
+        System.out.println("Do you wish to continue? [y/n]");
+
+        //This is the user telling the system if she/he wants to continue
+        String userConfirm = scan.nextLine().trim();
+
+        //conditional if the user selects to continue
+        if (userConfirm.equalsIgnoreCase("y") || userConfirm.equalsIgnoreCase("yes")) {
+            //if yes, then use recursion to redo the current factorial method
+            factorial(userNum);
+        }
+
+        //return the final results
+        return result;
+    }
+
+
 
 }
