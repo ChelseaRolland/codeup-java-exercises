@@ -18,26 +18,16 @@ public class HighLow {
         return random;
     }
 
-//    public static int getInteger(int min, int max) {
-//        Scanner scan = new Scanner(System.in);
-//        int userInput = scan.nextInt();
-//        //setup the Conditional of the user input to determine if its outside the min and max range
-//        if (userInput < min || userInput > max) {
-//            System.out.printf("Please choose a number between %d and %d.\n", min, max);
-//            return getInteger(min, max);
-//        }
-//
-//        return userInput;
-//    }
-
-    public static void getInteger(int min, int max) {
+    public static int getInteger(int min, int max) {
         Scanner scan = new Scanner(System.in);
         int userInput = scan.nextInt();
         //setup the Conditional of the user input to determine if its outside the min and max range
         if (userInput < min || userInput > max) {
             System.out.printf("Please choose a number between %d and %d.\n", min, max);
-            getInteger(min, max);
+            return getInteger(min, max);
         }
+
+        return userInput;
     }
 
     //users input --> this will also verify if the number is within the proper range
