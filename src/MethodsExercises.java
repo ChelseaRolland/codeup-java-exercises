@@ -1,7 +1,10 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
     public static void main(String[] args) {
+
+        /***  Basic Arithmetic  ***/
         System.out.println("add(1,2) = " + add(1, 2));
         System.out.println("subtract(1,2) = " + subtract(1, 2));
         System.out.println("multiply(1,2) = " + multiply(1, 2));
@@ -11,10 +14,18 @@ public class MethodsExercises {
         System.out.println("modulus(2,10) = " + modulus(2, 10));
         System.out.println("multiplication(3,3) = " + multiplication(3,3));
 
+        /***  Number in a Range  ***/
         System.out.println("Enter a number between 1 and 10");
         getInteger(1,10);
 
+        /***  Factorials  ***/
         factorial();
+
+        /***  Dice Rolling  ***/
+        diceRolling();
+
+
+
     }
 
     /***  Basic Arithmetic  ***/
@@ -119,23 +130,38 @@ public class MethodsExercises {
         Scanner scan = new Scanner(System.in);
         //Ask the user a question about the number of sides to the dice
         System.out.println("Enter the number of sides for a pair dice");
+
         //Generate the variable the # of dice sides
+        //This will also establish a range for the side for random #
+
+        //diceSides will be the max # of my range
         int diceSides = scan.nextInt();
+        scan.nextLine();
+
+        //min #
+        int min = 1;
+        //range
+        int range = diceSides - min +1;
+
+        //Rolling the Dice
+        System.out.println("Time to roll the dice!");
+        //For loop to roll thru the random numbers when the dice is rolled
+        for (int i = 0; i < 2; i++) {
+            int rand = (int)(Math.random() * range) + min;
+            System.out.println(rand);
+        }
 
         //Ask the user to roll the dice
         System.out.println("Do you want to roll the dice again? [y/n]");
-        String userResponse = scan.nextLine();
+        //Capture the user's response
+        String userResponse = scan.nextLine().trim();
+
+        //if yes/y, then use recursion to redo the current factorial method
         if (userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes")) {
             diceRolling();
         }
 
-        //Rolling the Dice
-
-
-
-
-
-        return 6;
+        return diceSides;
     }
 
 /***  Game Development 101  ***/
