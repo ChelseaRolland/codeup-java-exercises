@@ -14,6 +14,17 @@ public class DishTest {
         dish1.nameOfDish = "Galaxcial Observance Vegan Medlay";
         dish1.wouldRecommend = true;
         dish1.printSummary();
+
+        Dish dish2 = new Dish();
+        dish2.costInCents = 2530;
+        dish2.nameOfDish = "Universal Afrocana Azul Tortellini";
+        dish2.wouldRecommend = true;
+        dish2.printSummary();
+
+        DishTools.shoutDishName(dish1);
+        DishTools.analyzeDishCost(dish1);
+        DishTools.flipRecommendation(dish1);
     }
+
 
 }

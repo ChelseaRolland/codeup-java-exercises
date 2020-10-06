@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Dish {
 
     /**
@@ -17,10 +19,10 @@ public class Dish {
      *     3) test the printSummary() method by invoking it and checking if all instance values are correctly printed   *
      * **/
 
-    int costInCents;
-    String nameOfDish;
-    boolean wouldRecommend;
+    public int costInCents;
+    public String nameOfDish;
+    public boolean wouldRecommend;
     public void printSummary () {
-        System.out.printf("Cost: %d cents\nName: %s\nRecommended: %s\n", costInCents, nameOfDish, wouldRecommend);
+        System.out.printf("Cost: %d cents\nName: %s\nRecommended: %b\n \n", costInCents, nameOfDish, wouldRecommend);
     }
 }
