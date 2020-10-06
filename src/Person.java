@@ -8,6 +8,7 @@ public class Person {
         this.name = name;
     }
 
+    //methods for the PERSON class
     public String getName(){
         //TODO: return the person's name
         return this.name;
@@ -20,7 +21,7 @@ public class Person {
 
     public void sayHello(){
         //TODO: print a message to the console using the person's name
-        System.out.println("Hello, " + this.name);
+        System.out.printf("Hello, your name is %s\n", this.name);
     }
 
 
