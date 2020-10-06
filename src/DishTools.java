@@ -12,19 +12,19 @@ public class DishTools {
 
      **/
 
-    public static int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
-    public static void shoutDishName(Dish dish){
-        System.out.println(dish.nameOfDish.toUpperCase());
-    };
-
-    public static void analyzeDishCost(Dish dish) {
-      String message = (dish.costInCents < AVERAGE_COST_OF_DISH_IN_CENTS) ? "Less expensive than average!" : "More expensive than average!";
-        System.out.println(message);
-    };
-    public static void flipRecommendation(Dish dish){
-        dish.wouldRecommend = !dish.wouldRecommend;
-        System.out.println("Recommendation: " + dish.wouldRecommend);
-    }
+//    public static int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
+//    public static void shoutDishName(Dish dish){
+//        System.out.println(dish.nameOfDish.toUpperCase());
+//    };
+//
+//    public static void analyzeDishCost(Dish dish) {
+//      String message = (dish.costInCents < AVERAGE_COST_OF_DISH_IN_CENTS) ? "Less expensive than average!" : "More expensive than average!";
+//        System.out.println(message);
+//    };
+//    public static void flipRecommendation(Dish dish){
+//        dish.wouldRecommend = !dish.wouldRecommend;
+//        System.out.println("Recommendation: " + dish.wouldRecommend);
+//    }
 
 
 }
