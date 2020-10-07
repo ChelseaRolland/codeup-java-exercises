@@ -38,6 +38,7 @@ public class ArraysExercises {
         }
 
         addPerson(perPerson, new Person("Bleach"));
+        addPerson(perPerson, new Person("Itachi"));
 
     }
 
@@ -47,7 +48,7 @@ public class ArraysExercises {
         //With the new spot available at the end of the new copied array, add the single obj to that opened spot
         copyOfPpl[copyOfPpl.length - 1] = obj;
         //Void element --> return the another forEach loop to list out all of the element of an array system.out.println method
-        System.out.println("copyOfPpl = " + Arrays.toString(copyOfPpl));
+        //System.out.println("copyOfPpl = " + Arrays.toString(copyOfPpl));
         for (Person people : copyOfPpl) {
             System.out.println(people.getName());
         }
