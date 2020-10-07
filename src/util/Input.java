@@ -36,7 +36,6 @@ public class Input {
     };
 
     //Methods for Input Class//
-
     public String getString() {
         return this.scanner.nextLine().trim();
     };
@@ -47,6 +46,12 @@ public class Input {
         boolean response = input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
         return response;
     };
+
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        int inputNum = Integer.parseInt(scanner.nextLine());
+        return inputNum;
+    }
 
     public int getInt(int min, int max) {
         while(true){
@@ -59,15 +64,17 @@ public class Input {
     };
 
     public int getInt() {
-        System.out.println("Please enter an integer");
-        int inputNum = Integer.parseInt(scanner.nextLine());
+        return getInt("Please input an integer");
+    };
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        double inputNum = Double.parseDouble(scanner.nextLine());
         return inputNum;
     };
 
     public double getDouble() {
-        System.out.println("Please enter an number");
-        double inputNum = Double.parseDouble(scanner.nextLine());
-        return inputNum;
+        return getDouble("Please enter a number");
     };
 
     public double getDouble(double min, double max) {
