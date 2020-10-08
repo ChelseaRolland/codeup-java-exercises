@@ -47,11 +47,11 @@ public class Input {
         return response;
     };
 
-    public int getInt(String prompt) {
-        System.out.println(prompt);
-        int inputNum = Integer.parseInt(scanner.nextLine());
-        return inputNum;
-    }
+//    public int getInt(String prompt) {
+//        System.out.println(prompt);
+//        int inputNum = Integer.parseInt(scanner.nextLine());
+//        return inputNum;
+//    }
 
     public int getInt(int min, int max) {
         while(true){
@@ -63,8 +63,12 @@ public class Input {
         }
     };
 
+//    public int getInt() {
+//        return getInt("Please input an integer");
+//    };
+
     public int getInt() {
-        return getInt("Please input an integer");
+        return Integer.parseInt(scanner.nextLine());
     };
 
     public double getDouble(String prompt) {
