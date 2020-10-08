@@ -23,9 +23,6 @@ public class MethodsExercises {
 
         /***  Dice Rolling  ***/
         diceRolling();
-
-
-
     }
 
     /***  Basic Arithmetic  ***/
@@ -79,14 +76,16 @@ public class MethodsExercises {
         //System.out.println("Enter a number between 1 and 10");
 
         //Generate a variable to store the value of the user
-        int userInput = scan.nextInt();
+        int userInput = Integer.parseInt(scan.nextLine());
         //setup the Conditional of the user input to determine if its outside the min and max range
         if (userInput < min || userInput > max) {
+            System.out.printf("Sorry the number you inputted is does not fit within the %d thru %d range!\n", min, max);
             System.out.printf("Please choose a number between %d and %d.\n", min, max);
             return getInteger(min, max);
         }
         //Note when the number is correct is within the min/max range
         System.out.printf("Congrats, your number: %d, falls within the min: %d and max: %d range.\n", userInput, min, max);
+
         return userInput;
     }
 
@@ -117,7 +116,7 @@ public class MethodsExercises {
         //conditional if the user selects to continue
         if (userConfirm.equalsIgnoreCase("y") || userConfirm.equalsIgnoreCase("yes")) {
             //if yes/y, then use recursion to redo the current factorial method
-            factorial();
+            return factorial();
         }
 
         //return the final results
@@ -125,7 +124,47 @@ public class MethodsExercises {
     }
 
 /***  Dice Rolling  ***/
-    public static int diceRolling () {
+//    public static int diceRolling () {
+//        //Create the scanner
+//        Scanner scan = new Scanner(System.in);
+//        //Ask the user a question about the number of sides to the dice
+//        System.out.println("Enter the number of sides for a pair dice");
+//
+//        //Generate the variable the # of dice sides
+//        //This will also establish a range for the side for random #
+//
+//        //diceSides will be the max # of my range
+//        int diceSides = Integer.parseInt(scan.nextLine());
+//
+//        //min #
+//        int min = 1;
+//        //range
+//        int range = diceSides - min + 1;
+//
+//        //Rolling the Dice
+//        System.out.println("Time to roll the dice!");
+//        //For loop to roll thru the random numbers when the dice is rolled
+//        for (int i = 0; i < 2; i++) {
+//            int rand = (int)(Math.random() * range) + min;
+//            System.out.println(rand);
+//        }
+//
+//        //Ask the user to roll the dice again
+//        System.out.println("Do you want to roll the dice again? [y/n]");
+//        //Capture the user's response
+//        String userResponse = scan.nextLine().trim();
+//
+//        //if yes/y, then use recursion to redo the current diceRolling method
+//        if (userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes")) {
+//            return diceRolling();
+//        }
+//
+//        return diceSides;
+//    }
+
+
+    public static void diceRolling () {
+
         //Create the scanner
         Scanner scan = new Scanner(System.in);
         //Ask the user a question about the number of sides to the dice
@@ -135,13 +174,12 @@ public class MethodsExercises {
         //This will also establish a range for the side for random #
 
         //diceSides will be the max # of my range
-        int diceSides = scan.nextInt();
-        scan.nextLine();
+        int diceSides = Integer.parseInt(scan.nextLine());
 
         //min #
         int min = 1;
         //range
-        int range = diceSides - min +1;
+        int range = diceSides - min + 1;
 
         //Rolling the Dice
         System.out.println("Time to roll the dice!");
@@ -151,21 +189,17 @@ public class MethodsExercises {
             System.out.println(rand);
         }
 
-        //Ask the user to roll the dice
+        //Ask the user to roll the dice again
         System.out.println("Do you want to roll the dice again? [y/n]");
         //Capture the user's response
         String userResponse = scan.nextLine().trim();
 
-        //if yes/y, then use recursion to redo the current factorial method
+        //if yes/y, then use recursion to redo the current diceRolling method
         if (userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes")) {
             diceRolling();
         }
-
-        return diceSides;
     }
 
-/***  Game Development 101  ***/
-
-
+/***  Game Development 101 --> This is on another src file ***/
 
 }
