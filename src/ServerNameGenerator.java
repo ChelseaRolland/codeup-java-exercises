@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class ServerNameGenerator {
     /**
 
@@ -16,16 +18,27 @@ public class ServerNameGenerator {
 
      **/
 
+    public static String [] adjectives = {"quixotic","vast","quaint","squalid","ubiquitous","hollow","animated","zany","industrious","succinct"};
+    public static String [] nouns = {"zebra","quasar","nebula","neutron","photon","mist","houses","dolls","yard","farm"};
+
     public static void main(String[] args) {
-        String [] adjectives = {"quixotic","vast","quaint","squalid","ubiquitous","hollow","animated","zany","industrious","succinct"};
-        String [] nouns = {"zebra","quasar","nebula","neutron","photon","mist","houses","dolls","yard","farm"};
 
         System.out.println("Here is your server name:");
-        System.out.println(adjectives[randomIndex()] + "-" + nouns[randomIndex()]);
+        System.out.println(adjectives[randomIndex(adjectives)] + "-" + nouns[randomIndex(nouns)]);
+
+        System.out.println("Here is your server name:");
+        System.out.println(getWord(adjectives) + "-" + getWord(nouns));
     }
 
-    public static int randomIndex () {
-        return (int) (Math.floor(Math.random() * (10 - 1))+1);
+    //Dynamic, however, its not necessary less code when the randomizer is ran
+    public static int randomIndex (String [] words) {
+        return (int) (Math.floor(Math.random() * (words.length - 1))+1);
+    }
+
+    public static String getWord(String[] words) { //since both arrays of strings are the same data type
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(words.length); //this sets a boundary for the max random #
+        return words[randomIndex];
     }
 
 }

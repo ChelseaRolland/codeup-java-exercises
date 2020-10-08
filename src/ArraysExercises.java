@@ -34,7 +34,7 @@ public class ArraysExercises {
 
         //Iterate thru each element of the perPerson array to get their names
         for (Person people : perPerson) {
-            System.out.println(people.getName());
+            System.out.println("people.getName() = " + people.getName());
         }
 
         addPerson(perPerson, new Person("Bleach"));
@@ -42,16 +42,41 @@ public class ArraysExercises {
 
     }
 
-    public static void addPerson (Person[] ppl, Person obj) {
+    public static Person[] addPerson (Person[] originalArr, Person personToAdd) {
+        //Generate the copy of the array with the added length
+        Person[] copyOfPpl = Arrays.copyOf(originalArr, originalArr.length+1);
+        //With the new spot available at the end of the new copied array, add the single obj to that opened spot
+        copyOfPpl[copyOfPpl.length - 1] = personToAdd;
+        //Void element --> return the another forEach loop to list out all of the element of an array system.out.println method
+        //System.out.println("copyOfPpl = " + Arrays.toString(copyOfPpl));
+        for (Person people : copyOfPpl) {
+            System.out.println(people.getName());
+        }
+        return copyOfPpl;
+    }
+
+    public static void addPerson1 (Person[] ppl, Person obj) {
         //Generate the copy of the array with the added length
         Person[] copyOfPpl = Arrays.copyOf(ppl, ppl.length+1);
+        //Or you can update the value for the original array to use less code
+        ppl = Arrays.copyOf(ppl, ppl.length+1);
         //With the new spot available at the end of the new copied array, add the single obj to that opened spot
         copyOfPpl[copyOfPpl.length - 1] = obj;
+        ppl[ppl.length - 1] = obj;
         //Void element --> return the another forEach loop to list out all of the element of an array system.out.println method
         //System.out.println("copyOfPpl = " + Arrays.toString(copyOfPpl));
         for (Person people : copyOfPpl) {
             System.out.println(people.getName());
         }
     }
+
+    public static Person[] addPerson2 (Person[] ppl, Person obj) { //this just have 3 lines of code
+        //you can update the value for the original array to use less code
+        ppl = Arrays.copyOf(ppl, ppl.length+1);
+        //With the new spot available at the end of the new copied array, add the single obj to that opened spot
+        ppl[ppl.length - 1] = obj;
+        //return an array since that is what we set the data type to
+        return ppl;
+        }
 
 }

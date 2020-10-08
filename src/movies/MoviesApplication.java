@@ -20,6 +20,9 @@ public class MoviesApplication {
             //Exit the game
         } else if (userInput.getInt() == 1) {
             //View all of the movies
+            for (Movie film: movie) {
+
+            }
         } else if (userInput.getInt() == 2){
             //view movies in the animated category
         } else if (userInput.getInt() == 3) {
