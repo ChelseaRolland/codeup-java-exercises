@@ -1,11 +1,8 @@
 package movies;
 
-import jdk.jshell.ImportSnippet;
 import util.Input;
 
 import java.util.Arrays;
-
-//import java.lang.reflect.Array;
 
 /** Movie List
 
@@ -98,68 +95,6 @@ public class MoviesApplication {
             }
 
         } while(keepGoing);
-
-
-
-
-
-        if (userNum == 1) {
-            //View all of the movies
-            for (Movie cinema : MoviesArray.findAll()) {
-                System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-            }
-        } else if (userNum == 2) {
-            //view movies in the animated category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equals("animated")) {
-                    System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-        } else if (userNum == 3) {
-            //view movies in the drama category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equals("drama")) {
-                    System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-
-        } else if (userNum == 4) {
-            //view movies in the horror category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equalsIgnoreCase("horror")) {
-                    System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-        } else if (userNum == 5) {
-            //view movies in the scifi category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equalsIgnoreCase("scifi")) {
-                    System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-        } else if (userNum == 6) {
-            //view movies in the musical category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equalsIgnoreCase("musical")) {
-                    System.out.println(cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-        } else if (userNum == 7) {
-            //view movies in the comedy category
-            for (Movie cinema : MoviesArray.findAll()) {
-                if ((cinema.getMovieCategory()).equalsIgnoreCase("comedy")) {
-                    System.out.println("Comedy - cinema = " + cinema.getMovieName() + " -- " + cinema.getMovieCategory());
-                }
-            }
-        } else if (userNum == 0) {
-            System.out.println("You are now exiting the movie App");
-            welcomeToMovieApp = false;
-        }
-        else {
-            System.out.println("This is not a valid number for our options!");
-            System.out.println("Please enter a valid movie option number!");
-        }
-
     }
 
     public static Movie[] addMovie (Movie[] films, Movie obj) {
