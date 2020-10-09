@@ -1,32 +1,18 @@
 package shapes;
 
-public class Rectangle {
-    /**
-
-     Inside of your shapes directory, create a class named Rectangle. It should have protected properties for both length and width. Rectangle should define a constructor that accepts two numbers for length and width, and sets those properties.
-
-     Create two methods on the Rectangle class, getArea and getPerimeter that return the respective values. The formulas for both follow:
-
-
-     perimeter = 2 x length + 2 x width
-     area = length x width
-
-     **/
-
-    protected double length;
-    protected double width;
+public class Rectangle extends Quadrilateral implements Measurable{
 
     public Rectangle(double aLength, double aWidth) {
-        this.length = aLength;
-        this.width = aWidth;
+        super(aLength, aWidth);
     }
 
-    public double getArea(){
-        return this.length * this.width;
+    @Override
+    public double getArea() {
+        return super.getArea();
     }
 
-    public double getPerimeter () {
-        return (this.length * 2) + (this.width * 2);
+    @Override
+    public double getPerimeter() {
+        return super.getPerimeter();
     }
-
 }
