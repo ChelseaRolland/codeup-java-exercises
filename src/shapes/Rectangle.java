@@ -13,19 +13,20 @@ public class Rectangle {
 
      **/
 
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
-    public Rectangle(int aLength, int aWidth) {
+    public Rectangle(double aLength, double aWidth) {
         this.length = aLength;
         this.width = aWidth;
     }
 
-    public int getArea(){
+    public double getArea(){
         return this.length * this.width;
     }
 
-    public int getPerimeter () {
+    public double getPerimeter () {
         return (this.length * 2) + (this.width * 2);
     }
+
 }
