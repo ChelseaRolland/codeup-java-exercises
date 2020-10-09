@@ -1,17 +1,8 @@
 package shapes;
 
-public class Quadrilateral extends Shape implements Measurable{
+public abstract class Quadrilateral extends Shape implements Measurable{
     protected double length;
     protected double width;
-
-    @Override
-    public double getArea() {
-        return getLength() * getWidth();
-    }
-
-    public double getPerimeter() {
-        return (2 * getLength()) + (2 * getWidth());
-    }
 
     public Quadrilateral (double aLength, double aWidth) {
         this.length = aLength;
@@ -27,12 +18,9 @@ public class Quadrilateral extends Shape implements Measurable{
         return this.width;
     }
 
-    //setters
-    public void setLength (double aLength) {
-        this.length = aLength;
-    }
+    //setters --> abstract methods
+    public abstract void setLength (double aLength);
 
-    public void setWidth (double aWidth) {
-        this.width = aWidth;
-    }
+    public abstract void setWidth (double aWidth);
+
 }
