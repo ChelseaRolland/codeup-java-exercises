@@ -28,11 +28,11 @@ public class Quadrilateral extends Shape implements Measurable{
     }
 
     //setters
-    public static void setLength (double aLength) {
-        System.out.println(aLength);
+    public void setLength (double aLength) {
+        this.length = aLength;
     }
 
-    public static void setWidth (double aWidth) {
-        System.out.println(aWidth);
+    public void setWidth (double aWidth) {
+        this.width = aWidth;
     }
 }
