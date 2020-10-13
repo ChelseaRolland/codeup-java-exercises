@@ -43,8 +43,7 @@ public class Input {
     public boolean yesNo() {
         System.out.println("Please enter either yes or no");
         String input = this.scanner.nextLine().trim();
-        boolean response = input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
-        return response;
+        return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
     };
 
 //    public int getInt(String prompt) {
