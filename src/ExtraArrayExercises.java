@@ -31,4 +31,9 @@ public class ExtraArrayExercises {
      - be sure to display who's turn it is and who won
 
      **/
+
+    public static void main(String[] args) {
+        System.out.println(8 % 5);
+    }
+
 }
