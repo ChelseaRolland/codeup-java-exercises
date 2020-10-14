@@ -30,8 +30,9 @@ public class Student {
     public double getGradeAverage(){
         double sum = 0;
         for (Integer grade : this.grades) {
-            sum += (double) grade;
+            sum += grade;
         }
+        //since it is saving it into a double and division will bring out a double, you do not need to initialize the grades
         return sum / this.grades.size();
     }
 

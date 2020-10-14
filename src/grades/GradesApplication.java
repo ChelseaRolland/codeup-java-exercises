@@ -66,7 +66,8 @@ public class GradesApplication {
 
     }
 
-    public static void gradeList (HashMap students) {
+    //make sure to HempMap has the desired data types listed so you will not need to reinitialize the key values
+    public static void gradeList (HashMap<String, Student> students) {
         System.out.println("What student would you like to see more information on?");
 
         //Create a Scanner
@@ -80,7 +81,7 @@ public class GradesApplication {
             System.out.printf("Name: %s - Github Username: %s\n", selectedPerson.getName(), userInput);
             System.out.printf("Current Average: %.1f\n", selectedPerson.getGradeAverage());
         } else {
-            System.out.printf("Sorry, no student found with the GitHub username of \"%s\".\n", userInput);
+            System.err.printf("Sorry, no student found with the GitHub username of \"%s\".\n", userInput);
         }
 
         //Ask the user if they want to to continue
