@@ -31,39 +31,39 @@ public class GroceryListApp {
     public static void groceryChoices (HashMap<String, Integer> lists) {
         //Scanners
         Input userInput = new Input();
-        Integer userChoice = userInput.getInt(1,5);
-        String items = userInput.getString();
-        Integer numOfItems = userInput.getInt();
+        //Integer userChoice = userInput.getInt(1,5);
+        //String items = userInput.getString();
+        //Integer numOfItems = userInput.getInt();
 
 
         //Number of Choices
         System.out.println("Please select one of the following choices?");
         System.out.println("\n" + "1 --> Produce\n" + "2 --> Meats\n" + "3 --> Dairy\n" + "4 --> Sweets\n" + "5 --> Frozen\n");
-        switch (userChoice) {
-            case 1:
-                System.out.println("PRODUCE");
-                break;
-            case 2:
-                System.out.println("MEATS");
-                break;
-            case 3:
-                System.out.println("DAIRY");
-                break;
-            case 4:
-                System.out.println("SWEETS");
-                break;
-            case 5:
-                System.out.println("FROZEN");
-                break;
-            default:
-                System.out.println("This is not an option. Please choose one of the given options.");
-                break;
-        }
+//        switch (userChoice) {
+//            case 1:
+//                System.out.println("PRODUCE");
+//                break;
+//            case 2:
+//                System.out.println("MEATS");
+//                break;
+//            case 3:
+//                System.out.println("DAIRY");
+//                break;
+//            case 4:
+//                System.out.println("SWEETS");
+//                break;
+//            case 5:
+//                System.out.println("FROZEN");
+//                break;
+//            default:
+//                System.out.println("This is not an option. Please choose one of the given options.");
+//                break;
+//        }
 
 
         //Enter the name of items
         System.out.println("Enter the name of the item. & How many?");
-        lists.putIfAbsent(items, numOfItems);
+        //lists.putIfAbsent(items, numOfItems);
 
         //How many items
         //System.out.println("How many?");
