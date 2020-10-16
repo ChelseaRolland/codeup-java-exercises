@@ -61,7 +61,13 @@ public class Input {
     public int getInt(int min, int max) {
         while (true) {
             System.out.printf("Please enter integers between %d and %d\n", min, max);
+            int num;
+            try{
+                String input = scanner,nextLine();
+                num = Integer.parseInt(input);
+            } catch (NumberFormatException e)
             int inputNum = Integer.parseInt(scanner.nextLine());
+            int inputNum = scanner.nextInt();
             if (inputNum >= min && inputNum <= max) {
                 return inputNum;
             }
